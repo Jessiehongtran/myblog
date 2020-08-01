@@ -1,0 +1,45 @@
+.posts-container {
+    display: flex;
+    justify-content: center;
+
+    .posts {
+        // margin: 30px 100px 30px 100px;
+        width: 50%;
+
+        .each-post {
+            border: 1px solid #E4E6EC;
+            margin-bottom: 40px;
+
+            .image {
+                max-height: 200px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: auto
+                }
+
+            }
+
+            .text {
+                margin: 0px;
+                padding: 0 30px 30px 20px;
+                text-align: left;
+
+                p {
+                    margin-top: 0px;
+                    text-align: left;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                a {
+                    color: green;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+}
