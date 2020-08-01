@@ -1,0 +1,23 @@
+.post-container {
+    display: flex;
+    justify-content: center;
+
+    .post {
+        width: 60%;
+
+        .text {
+            text-align: left;
+
+            .date {
+                color: grey;
+                font-size: 14px;
+            }
+        }
+
+        .image {
+            img {
+                width: 100%
+            }
+        }
+    }
+}
