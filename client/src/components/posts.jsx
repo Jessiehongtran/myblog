@@ -15,6 +15,7 @@ export default class Posts extends React.Component {
         return (
             <div className="posts-container">
                 <div className="posts">
+                    <h1>My blog</h1>
                     {this.state.posts.map(post => 
                     <div className="each-post">
                         <div className="image">

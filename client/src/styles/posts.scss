@@ -1,9 +1,9 @@
 .posts-container {
     display: flex;
     justify-content: center;
+    font-family: 'Poppins', sans-serif;
 
     .posts {
-        // margin: 30px 100px 30px 100px;
         width: 50%;
 
         .each-post {
