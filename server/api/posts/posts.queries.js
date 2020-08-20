@@ -12,6 +12,7 @@ module.exports = {
                     "p.title",
                     "p.content",
                     "p.likes",
+                    "p.created_at",
                     "i.image_url",
                 //     "c.comment"
                 )
