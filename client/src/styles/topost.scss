@@ -1,0 +1,31 @@
+.topost {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70%;
+    margin-left: 10%;
+
+    .title {
+        margin: 30px 30px 0 30px;
+        height: 40px;
+        width: 100%
+    }
+
+    .content {
+        height: 30vh;
+        margin: 30px 30px 0 30px;
+        width: 100%
+    }
+
+    .image {
+        margin: 30px 30px 0 30px;
+        width: 100%
+    }
+
+    .image_display {
+        width: 100%;
+        height: auto;
+        margin: 30px 30px 0 30px;
+    }
+}
