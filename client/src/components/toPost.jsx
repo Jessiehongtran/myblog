@@ -89,6 +89,7 @@ export default class ToPost extends React.Component {
                     onChange={this.handleChange}  
                 />
                 <img
+                    alt=""
                     className="image_display"
                     src={this.state.imgUrl} 
                 />
