@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/posts.scss';
 import { API_URL } from '../config';
+import Axios from 'axios';
 
 
 export default class Posts extends React.Component {
