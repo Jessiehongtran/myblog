@@ -33,7 +33,7 @@ export default class Posts extends React.Component {
                         <p>{post.content}</p>
                     </div>
                     <div className="image">
-                        <img src={post.image}/>
+                        <img src={post.image_url}/>
                     </div>
                 </div>
             </div>

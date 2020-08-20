@@ -1,14 +1,25 @@
 import React from 'react';
-import { posts } from '../data/posts';
 import { Link } from 'react-router-dom';
-import '../styles/posts.scss'
+import '../styles/posts.scss';
+import { API_URL } from '../config';
+
 
 export default class Posts extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            posts: posts
+            posts: []
         }
+    }
+
+    componentDidMount(){
+        Axios.get(`${ API_URL }/posts`)
+             .then(res => {
+                 this.setState({posts: res.data})
+             })
+             .catch(err => {
+                 console.log(err)
+             })
     }
 
     render(){
