@@ -1,28 +1,31 @@
 import React from 'react';
-import { posts } from '../data/posts';
-import '../styles/post.scss'
+import '../styles/post.scss';
+import Axios from 'axios';
+import { API_URL } from '../config'
 
 export default class Posts extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            posts: posts,
+            post: {}
             
         }
     }
 
+    componentDidMount(){
+        const postId = this.props.props.match.params.postId
+        Axios.get(`${ API_URL }/posts/${postId}`)
+             .then(res => {
+                this.setState({post: res.data})
+             })
+             .catch(err => {
+                 console.log(err)
+             })
+    }
+
     render(){
-        let post = {}
 
-        console.log('props', this.props.props.match.params.postId)
-        
-        for (let i=0; i< this.state.posts.length; i++){
-            if (i + 1 == this.props.props.match.params.postId){
-                post = this.state.posts[i]
-            }
-        }
-
-        console.log(post)
+        const {post} = this.state
         
         return (
             <div className="post-container">
@@ -33,7 +36,7 @@ export default class Posts extends React.Component {
                         <p>{post.content}</p>
                     </div>
                     <div className="image">
-                        <img src={post.image_url}/>
+                        <img alt="post_image" src={post.image_url}/>
                     </div>
                 </div>
             </div>
