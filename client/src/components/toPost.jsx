@@ -20,7 +20,7 @@ export default class ToPost extends React.Component {
 
     handleChange(e){
         
-        if (e.target.name == "image"){
+        if (e.target.name === "image"){
             const image = e.target.files[0]
             this.setState({image: image})
             var reader = new FileReader();
