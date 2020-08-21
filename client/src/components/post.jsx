@@ -32,15 +32,16 @@ export default class Posts extends React.Component {
             <div className="post-container">
                 <div className="post">
                     <div className="text">
-                        <h2>{post.title}</h2>
-                        <p className="date">{post.created_at}</p>
-                        <p>{post.content}</p>
+                        <h2>{this.state.post.title}</h2>
+                        <p className="date">{this.state.post.created_at}</p>
+                        <p>{this.state.post.content}</p>
                     </div>
                     <div className="image">
-                        <img alt="post_image" src={post.image_url}/>
+                        <img alt="post_image" src={this.state.post.image_url}/>
                     </div>
                 </div>
             </div>
         )
     }
 }
+
