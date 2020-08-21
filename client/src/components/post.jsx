@@ -16,7 +16,7 @@ export default class Posts extends React.Component {
         const postId = this.props.props.match.params.postId
         Axios.get(`${ API_URL }/posts/${postId}`)
              .then(res => {
-                this.setState({post: res.data})
+                this.setState({post: res.data[0]})
              })
              .catch(err => {
                  console.log(err)
@@ -26,6 +26,7 @@ export default class Posts extends React.Component {
     render(){
 
         const {post} = this.state
+        console.log('post', post)
         
         return (
             <div className="post-container">
