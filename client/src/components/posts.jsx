@@ -31,7 +31,7 @@ export default class Posts extends React.Component {
                     {this.state.posts.map(post => 
                     <div className="each-post">
                         <div className="image">
-                            <img alt="" src={post.image}/>
+                            <img alt="" src={post.image_url}/>
                         </div>
                         <div className="text">
                             <h2>{post.title}</h2>
