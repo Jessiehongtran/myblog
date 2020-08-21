@@ -14,8 +14,9 @@ router.get('/', async (req,res) => {
 
 //GET a post by id
 router.get('/:postId', async (req,res) => {
+    const postId = req.params.postId
     try {
-        const post = await Posts.getById()
+        const post = await Posts.getById(postId)
         res.status(200).json(post)
     } catch (err){
         res.status(500).json(err.message)
