@@ -22,13 +22,14 @@ module.exports = {
                 .where("p.id", id)
                 .join("post_image as pi", "p.id", "pi.post_id")
                 .join("images as i", "i.id", "pi.image_id")
-                .join("post_comment as pc", "p.id", "pc.post_id")
-                .join("comments as c", "c.id", "pc.comment_id")
+                // .join("post_comment as pc", "p.id", "pc.post_id")
+                // .join("comments as c", "c.id", "pc.comment_id")
                 .select(
                     "p.id",
                     "p.title",
                     "p.content",
                     "p.likes",
+                    "p.created_at",
                     "i.image_url",
                     "c.comment"
                 )
