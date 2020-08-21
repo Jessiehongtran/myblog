@@ -19,7 +19,7 @@ module.exports = {
     },
     getById: (postId) => {
         return db("posts as p")
-                .where("p.id", postId)
+                .where({id: postId})
                 .join("post_image as pi", "p.id", "pi.post_id")
                 .join("images as i", "i.id", "pi.image_id")
                 // .join("post_comment as pc", "p.id", "pc.post_id")
