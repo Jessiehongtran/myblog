@@ -31,7 +31,7 @@ module.exports = {
                     "p.likes",
                     "p.created_at",
                     "i.image_url",
-                    "c.comment"
+                    // "c.comment"
                 )
     },
     create: (post) => {
