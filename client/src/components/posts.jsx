@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/posts.scss';
 import { API_URL } from '../config';
-import cat_loading from '../asset/cat_loading.png';
+import cat_loading from '../asset/cat_loading.gif';
 import Axios from 'axios';
 
 
@@ -44,7 +44,7 @@ export default class Posts extends React.Component {
                                 <Link to={`/post/${post.id}`}>Read more ...</Link>
                             </div>
                         </div>)
-                        : <img src={cat_loading}/>
+                        : <img src={cat_loading} style={{width: '70%'}}/>
                     }
                 </div>
             </div>
